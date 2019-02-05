@@ -1,0 +1,50 @@
+{
+  "name": "stepsy",
+  "version": "1.0.0",
+  "description": "A content stepper implementation for the react.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --config ./webpack.config.js --inline --hot --port 5000",
+    "test": "jest",
+    "build": "babel ./src/jsx/Container.js --out-file index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CeamKrier/stepsy.git"
+  },
+  "keywords": [
+    "stepper",
+    "react"
+  ],
+  "author": "Emre Çakır",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/CeamKrier/stepsy/issues"
+  },
+  "homepage": "https://github.com/CeamKrier/stepsy#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.0",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.9.0",
+    "jest": "^24.1.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.1",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^.+\\.(css|less)$": "<rootDir>/config/CSSStub.js"
+    }
+  }
+}
