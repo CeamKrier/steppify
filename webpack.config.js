@@ -18,17 +18,18 @@ module.exports = {
         exclude: '/node_modules',
         loader: 'babel-loader',
         query: {
-          presets: ['@babel/preset-env', '@babel/preset-react']
+          presets: ['@babel/preset-env', '@babel/preset-react'],
+          compact: false
         }
       },
       {
         test: /\.css$/,
         loader: 'style-loader!css-loader'
-      }/* ,
+      },
       {
         test: /\.scss$/,
         loader: 'style-loader!css-loader!sass-loader'
-      } */
+      }
     ]
   },
   devServer: {

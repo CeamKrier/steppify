@@ -1,3 +1,41 @@
-h3 {
-  color: red;
+
+.stepAlign {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.bigHeight {
+  margin-bottom: 200px;
+}
+
+.ui.top.attached.menu {
+  display: flex;
+  align-items: center;
+}
+
+.displayProgressBar {
+  margin: 0 auto!important;
+  padding-top: 10px!important;
+  border-bottom: 1px solid #dbdbdc;
+}
+
+.fixedToTop {
+  position: fixed;
+  width: 98%;
+  background: white;
+  z-index: 999;
+  top: 0;
+}
+
+.displayContents {
+  display: contents;
+}
+
+.contentContainer {
+  margin-top: 200px;
+}
+
+#wrapper {
+  height: 800px;
+  overflow: auto;
 }

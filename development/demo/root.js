@@ -5,7 +5,7 @@ import Stepsy from '../../src/jsx/Container'
 export default class Root extends Component {
   render () {
     return (
-      <div>
+      <div id='wrapper'>
         <Stepsy />
       </div>
     )
