@@ -61,7 +61,7 @@ export default class StepTracker extends React.Component {
           <span class='progress-marker'>{(parseInt(index) + 1)}</span>
           <span class='progress-text'>
             <h4 class='progress-title'> {value.title} </h4>
-            {value.titleSummary}
+            {value.titleSummary !== null ? value.titleSummary : null}
           </span>
         </a>
       </li>

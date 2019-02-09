@@ -1,5 +1,5 @@
 {
-  "name": "stepsy",
+  "name": "steppify",
   "version": "1.0.0",
   "description": "A content stepper implementation for the react.",
   "main": "index.js",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CeamKrier/stepsy.git"
+    "url": "git+https://github.com/CeamKrier/steppify.git"
   },
   "keywords": [
     "stepper",
@@ -22,9 +22,9 @@
   "author": "Emre Çakır",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/CeamKrier/stepsy/issues"
+    "url": "https://github.com/CeamKrier/steppify/issues"
   },
-  "homepage": "https://github.com/CeamKrier/stepsy#readme",
+  "homepage": "https://github.com/CeamKrier/steppify#readme",
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",

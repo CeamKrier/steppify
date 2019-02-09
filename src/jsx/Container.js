@@ -18,48 +18,20 @@ export default class Container extends Component {
 
   componentDidMount () {
     this.setState({
-      contents: [
-        {
-          title: 'Gee',
-          titleSummary: 'Is always your sidekick on the adventures',
-          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed adipiscing diam donec adipiscing tristique risus.'
-        },
-        {
-          title: 'Foo',
-          titleSummary: 'Is the battlecry for the fight',
-          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed adipiscing diam donec adipiscing tristique risus.'
-        },
-        {
-          title: 'Bar',
-          titleSummary: 'Is the place where you find the inner self',
-          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed adipiscing diam donec adipiscing tristique risus.'
-        },
-        {
-          title: 'Boo',
-          titleSummary: 'Is the word to scare you',
-          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed adipiscing diam donec adipiscing tristique risus.'
-        },
-        {
-          title: 'Boo',
-          titleSummary: 'Is the word to scare you',
-          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed adipiscing diam donec adipiscing tristique risus.'
-        },
-        {
-          title: 'Boo',
-          titleSummary: 'Is the word to scare you',
-          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed adipiscing diam donec adipiscing tristique risus.'
-        }
-      ]
+      contents: this.props.contents
     })
   }
 
   async attachOnScrollEventListener () {
-    await document.querySelector('div#wrapper')
-    let component = document.querySelector('div#wrapper')
+    await document.querySelector('div.wrapper')
+    let component = document.querySelector('div.wrapper')
     component.addEventListener('scroll', (e) => {
       let scrollY = component.scrollTop
       let currentStep = this.checkCurrentStep(scrollY)
-      console.log(currentStep)
+      console.log(scrollY)
+      console.log('scroll ' + component.scrollHeight)
+      console.log('client ' + component.clientHeight)
+      console.log('offset' + component.offsetHeight)
       this.setState({
         currentStep: currentStep
       })
@@ -84,14 +56,25 @@ export default class Container extends Component {
   }
 
   async milestoneHandler () {
-    await document.querySelector('div#wrapper')
-    let component = document.querySelector('div#wrapper')
-    let maxHeight = component.scrollHeight - component.clientHeight
+    await document.querySelector('div.wrapper')
+    let clientHeight = document.querySelector('div.wrapper').clientHeight - 400
+    let clientHeightPerStep = clientHeight / this.state.contents.length
+    let milestones = []
+    for (let index = 1; index < this.state.contents.length + 1; index++) {
+      let stepsHeight = document.getElementById('section' + index).scrollHeight
+      if (index !== 1) {
+        stepsHeight = parseInt(milestones[index - 2]) + stepsHeight
+      }
+      stepsHeight = stepsHeight - clientHeightPerStep
+      milestones.push(stepsHeight)
+    }
+    /* let maxHeight = component.scrollHeight - component.clientHeight
     let cornerStones = maxHeight / this.state.contents.length
     let milestones = [0, cornerStones]
     for (let index = 2; index < this.state.contents.length + 1; index++) {
       milestones.push(cornerStones * index)
-    }
+    } */
+    milestones.unshift(0)
     this.setState({
       milestones: milestones
     })
