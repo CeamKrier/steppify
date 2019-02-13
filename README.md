@@ -1,4 +1,4 @@
-# stepsy
+# steppify
 
 A content stepper implementation for the react.
 
@@ -33,12 +33,18 @@ const mockData = [
   {
     title: 'Think of a business idea.',
     content: <div>
-      <p>Do you already have a killer business idea? If so, congratulations, you can proceed to the next section. If not, there are a ton of ways to start brainstorming for a good idea. An article on Entrepreneur, “8 Ways to Come Up With a Business Idea,” helps people break down potential business ideas. Here are a few pointers from the article:</p>
+      <p>Do you already have a killer business idea? If so, congratulations, you can proceed to the next section. 
+      If not, there are a ton of ways to start brainstorming for a good idea. 
+      An article on Entrepreneur, “8 Ways to Come Up With a Business Idea,” helps people break down potential business ideas. 
+      Here are a few pointers from the article:</p>
       <ul>
-        <li>Ask yourself what´s next. What technology or advancement is coming soon, and how will that change the business landscape as we know it? Can you get ahead of the curve?</li>
-        <li>Fix something that bugs you. People would rather have less of a bad thing than more of a good thing. If your business can fix a problem for your customers, they´ll thank you for it.</li>
+        <li>Ask yourself what´s next. What technology or advancement is coming soon, 
+        and how will that change the business landscape as we know it? Can you get ahead of the curve?</li>
+        <li>Fix something that bugs you. People would rather have less of a bad thing than more of a good thing. 
+        If your business can fix a problem for your customers, they´ll thank you for it.</li>
       </ul>
-      <p>Also, go out and meet people and ask them questions, seek advice from other entrepreneurs, research ideas online or use whatever method makes the most sense to you.</p>
+      <p>Also, go out and meet people and ask them questions, seek advice from other entrepreneurs, 
+      research ideas online or use whatever method makes the most sense to you.</p>
     </div>
   }
 ]
