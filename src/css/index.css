@@ -19,14 +19,23 @@
   border-bottom: 1px solid #dbdbdc;
 }
 
-.fixedToTop {
+.stepper {
   width: 98%;
   z-index: 999;
-  top: 0;
   margin: 0 auto;
 }
 
+.top {
+  border-bottom: 2px solid #dbdbdc;
+  top: 0;
+}
 
+.bottom {
+  position: absolute;
+  background: white;
+  border-top: 2px solid #dbdbdc;
+  bottom: 0;
+}
 
 .contentContainer {
   text-align: center;

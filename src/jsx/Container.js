@@ -10,7 +10,8 @@ export default class Container extends Component {
     this.state = {
       contents: [],
       milestones: [],
-      currentStep: -1
+      currentStep: -1,
+      position: this.props.position === 'top' || 'bottom' ? this.props.position : 'top'
     }
     this.attachOnScrollEventListener()
     this.milestoneHandler()
@@ -27,9 +28,8 @@ export default class Container extends Component {
     let component = document.querySelector('.contentContainer')
     component.addEventListener('scroll', (e) => {
       let scrollY = component.scrollTop
-      let currentStep = this.checkCurrentStep(scrollY)
       console.log(scrollY)
-      console.log('scroll ' + component.scrollHeight)
+      let currentStep = this.checkCurrentStep(scrollY)
       this.setState({
         currentStep: currentStep
       })
@@ -50,7 +50,7 @@ export default class Container extends Component {
 
   async milestoneHandler () {
     await document.querySelector('.contentContainer')
-    let stepperHeight = document.getElementsByClassName('fixedToTop')[0].clientHeight
+    let stepperHeight = document.getElementsByClassName('stepper')[0].clientHeight
     let milestones = []
     for (let index = 1; index < this.state.contents.length + 1; index++) {
       let stepsHeight = document.querySelector('#section' + index + ' h3').offsetTop
@@ -60,17 +60,17 @@ export default class Container extends Component {
       }
       milestones.push(stepsHeight - stepperHeight - decrementPerStep)
     }
-    milestones.push(milestones[this.state.contents.length - 1] + 100)
+    milestones.push(document.querySelector('.contentContainer').scrollHeight)
+    console.log(milestones)
     this.setState({
       milestones: milestones
     })
-    console.log(milestones)
   }
 
   render () {
     return (
       <div className='displayContents'>
-        <div className='fixedToTop'>
+        <div className={this.state.position + ' stepper'}>
           <StepTracker milestones={this.state.milestones} currentStep={this.state.currentStep} contents={this.state.contents} />
         </div>
 

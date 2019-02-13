@@ -192,7 +192,7 @@ export default class Root extends Component {
   render () {
     return (
       <div className='wrapper'>
-        <Stepsy contents={mockData} />
+        <Stepsy position='top' contents={mockData} />
       </div>
     )
   }
