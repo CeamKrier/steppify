@@ -17,7 +17,8 @@ export default class StepTracker extends React.Component {
   handleClicksOnProgressBar (e) {
     e.preventDefault()
     document.querySelector('#section' + this.val).scrollIntoView({
-      behavior: 'smooth'
+      behavior: 'smooth',
+      block: 'start'
     })
     this.ref.organizeStepperHighlights(this.val)
   }

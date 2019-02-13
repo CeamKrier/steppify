@@ -19,9 +19,7 @@ export default class StepContent extends React.Component {
             <p>
               {this.props.content}
             </p>
-            {/* <Segment attached='bottom'>
 
-            </Segment> */}
           </div>
         </div>
       </div>
