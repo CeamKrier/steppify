@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import Stepsy from '../../src/jsx/Container'
+import Steppify from '../../src/jsx/Container'
 
 const mockData = [
   {
@@ -191,7 +191,7 @@ const mockData = [
 export default class Root extends Component {
   render () {
     return (
-      <Stepsy position='bottom' contents={mockData} />
+      <Steppify position='bottom' contents={mockData} />
     )
   }
 }
