@@ -191,9 +191,7 @@ const mockData = [
 export default class Root extends Component {
   render () {
     return (
-      <div className='wrapper'>
-        <Stepsy position='top' contents={mockData} />
-      </div>
+      <Stepsy position='bottom' contents={mockData} />
     )
   }
 }
