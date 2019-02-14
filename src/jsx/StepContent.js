@@ -1,4 +1,3 @@
-/* import { Dropdown, Menu, Segment } from 'semantic-ui-react' */
 import React from 'react'
 
 export default class StepContent extends React.Component {

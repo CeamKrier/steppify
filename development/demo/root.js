@@ -1,6 +1,13 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Steppify from '../../src/jsx/Container'
+/**
+ * For production
+ * import Steppify from './src/jsx/Container'
+ */
+/**
+ * For development
+ * import Steppify from '../../src/jsx/Container' */
 
 const mockData = [
   {
