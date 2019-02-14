@@ -14,9 +14,9 @@ export default class StepContent extends React.Component {
       <div id={'section' + this.props.id} className='stepAlign'>
         <div className='bigHeight'>
           <div>
-            <h3 style={{width: '-webkit-fill-available'}}> Section {this.props.id}</h3>
+            <h3 style={{width: '-webkit-fill-available'}}> {this.props.id + ' - ' + this.props.data.title}</h3>
             <p>
-              {this.props.content}
+              {this.props.data.content}
             </p>
 
           </div>

@@ -10,5 +10,5 @@ it('container text renders on the page', () => {
     <Stepsy />
   )
 
-  expect(wrapper.find('h3').text()).toEqual('This is a test message')
+  expect(wrapper.find('h3').first().text()).toEqual('1 - Evaluate Yourself')
 })

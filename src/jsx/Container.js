@@ -28,7 +28,7 @@ export default class Container extends Component {
     let component = document.querySelector('.contentContainer')
     component.addEventListener('scroll', (e) => {
       let scrollY = component.scrollTop
-      console.log(scrollY)
+
       let currentStep = this.checkCurrentStep(scrollY)
       this.setState({
         currentStep: currentStep
@@ -76,7 +76,7 @@ export default class Container extends Component {
 
         <div className='contentContainer'>
           {this.state.contents.map((value, index) => {
-            return <StepContent id={index + 1} content={value.content} />
+            return <StepContent id={index + 1} data={value} />
           })}
         </div>
       </div>
