@@ -9,7 +9,7 @@
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.js --inline --hot --port 5000",
     "test": "jest",
-    "build": "babel ./src/jsx/Container.js ./src/jsx/StepContent.js ./src/jsx/StepTracker.js --out-file index.js"
+    "build": "babel ./src/jsx/Container.js --out-file index.js"
   },
   "repository": {
     "type": "git",

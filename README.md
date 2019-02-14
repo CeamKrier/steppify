@@ -52,13 +52,14 @@ const mockData = [
 export default class Root extends Component {
   render () {
     return (
-      <Stepsy position='top' contents={mockData} />
+      <Steppify position='top' contents={mockData} />
     )
   }
 }
 
 ```
 
+[![Edit 9o3pww6l9o](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/9o3pww6l9o)
 
 
 ## Features
@@ -77,9 +78,9 @@ You also can decide where to display your stepper!
 
 ```javascript
 //That would render stepper at the top of the page, you can omit that though. It's default configuration.
-<Stepsy position='top' contents={mockData} />
+<Steppify position='top' contents={mockData} />
 //Similarly, that would render the stepper at the bottom of the page.
-<Stepsy position='bottom' contents={mockData} />
+<Steppify position='bottom' contents={mockData} />
 ```
 
 Also, stepper is able to track your scroll position and accordingly will highlight the current step to help your users to follow the steps even more easier. You also can go to the specific step by clicking that on the stepper.
