@@ -1,4 +1,4 @@
-# steppify
+# steppify [![Build Status](https://travis-ci.org/CeamKrier/steppify.svg?branch=master)](https://travis-ci.org/CeamKrier/steppify)
 
 A content stepper implementation for the react.
 
