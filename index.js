@@ -84,7 +84,6 @@ var Container =
                 component = document.querySelector('.contentContainer');
                 component.addEventListener('scroll', function (e) {
                   var scrollY = component.scrollTop;
-                  console.log(scrollY);
 
                   var currentStep = _this2.checkCurrentStep(scrollY);
 
@@ -188,7 +187,7 @@ var Container =
       }, this.state.contents.map(function (value, index) {
         return _react.default.createElement(_StepContent.default, {
           id: index + 1,
-          content: value.content
+          data: value
         });
       })));
     }
