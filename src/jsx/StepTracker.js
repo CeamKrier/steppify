@@ -1,4 +1,4 @@
-import 'progress-tracker'
+import '../css/tracker.scss'
 import React from 'react'
 
 export default class StepTracker extends React.Component {

@@ -17,7 +17,7 @@ export default class Container extends Component {
     this.milestoneHandler()
   }
 
-  componentDidMount () {
+  componentWillMount () {
     this.setState({
       contents: this.props.contents
     })

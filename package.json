@@ -48,11 +48,10 @@
   },
   "jest": {
     "moduleNameMapper": {
-      "^.+\\.(css|less)$": "<rootDir>/config/CSSStub.js"
+      "^.+\\.(css|less|scss)$": "<rootDir>/config/CSSStub.js"
     }
   },
   "dependencies": {
-    "lodash": "^4.17.11",
-    "progress-tracker": "^1.4.0"
+    "lodash": "^4.17.11"
   }
 }

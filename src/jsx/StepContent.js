@@ -6,10 +6,9 @@ export default class StepContent extends React.Component {
     this.state = {
       id: 'content'
     }
-    this.sectionRender = this.sectionRender.bind(this)
   }
 
-  sectionRender () {
+  render () {
     return (
       <div id={'section' + this.props.id} className='stepAlign'>
         <div className='bigHeight'>
@@ -18,15 +17,9 @@ export default class StepContent extends React.Component {
             <p>
               {this.props.data.content}
             </p>
-
           </div>
         </div>
       </div>
-    )
-  }
-  render () {
-    return (
-      this.sectionRender()
     )
   }
 }
