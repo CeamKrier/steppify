@@ -4,6 +4,14 @@ import Steppify from '../../src/jsx/Container'
 /**
  * For production
  * import Steppify from './src/jsx/Container'
+
+ * Into index.js
+
+ * require('./src/css/index.css')
+
+   var _StepTracker = _interopRequireDefault(require('./src/jsx/StepTracker'))
+
+   var _StepContent = _interopRequireDefault(require('./src/jsx/StepContent'))
  */
 /**
  * For development

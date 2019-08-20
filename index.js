@@ -1,41 +1,41 @@
-"use strict";
+'use strict';
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+var _interopRequireWildcard = require('@babel/runtime/helpers/interopRequireWildcard')
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+var _interopRequireDefault = require('@babel/runtime/helpers/interopRequireDefault')
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, '__esModule', {
   value: true
-});
-exports.default = void 0;
+})
+exports.default = void 0
 
-var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+var _regenerator = _interopRequireDefault(require('@babel/runtime/regenerator'))
 
-var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
+var _asyncToGenerator2 = _interopRequireDefault(require('@babel/runtime/helpers/asyncToGenerator'))
 
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+var _classCallCheck2 = _interopRequireDefault(require('@babel/runtime/helpers/classCallCheck'))
 
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+var _createClass2 = _interopRequireDefault(require('@babel/runtime/helpers/createClass'))
 
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+var _possibleConstructorReturn2 = _interopRequireDefault(require('@babel/runtime/helpers/possibleConstructorReturn'))
 
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+var _getPrototypeOf2 = _interopRequireDefault(require('@babel/runtime/helpers/getPrototypeOf'))
 
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+var _inherits2 = _interopRequireDefault(require('@babel/runtime/helpers/inherits'))
 
-var _react = _interopRequireWildcard(require("react"));
+var _react = _interopRequireWildcard(require('react'))
 
-require("../css/index.css");
+require('./src/css/index.css')
 
-var _StepTracker = _interopRequireDefault(require("./StepTracker"));
+var _StepTracker = _interopRequireDefault(require('./src/jsx/StepTracker'))
 
-var _StepContent = _interopRequireDefault(require("./StepContent"));
+var _StepContent = _interopRequireDefault(require('./src/jsx/StepContent'))
 
-var _lodash = _interopRequireDefault(require("lodash"));
+var _lodash = _interopRequireDefault(require('lodash'))
 
 var Container =
-/*#__PURE__*/
-function (_Component) {
+/*#__PURE__ */
+(function (_Component) {
   (0, _inherits2.default)(Container, _Component);
 
   function Container(props) {
@@ -196,6 +196,6 @@ function (_Component) {
     }
   }]);
   return Container;
-}(_react.Component);
+}(_react.Component));
 
-exports.default = Container;
+exports.default = Container
