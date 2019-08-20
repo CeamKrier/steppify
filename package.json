@@ -1,6 +1,6 @@
 {
   "name": "steppify",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "A content stepper implementation for the react.",
   "main": "index.js",
   "directories": {
