@@ -34,7 +34,7 @@ const mockData = [
 
 it('container text renders on the page', () => {
   const wrapper = mount(
-    <Steppify contents={mockData} />
+    <Steppify contents={mockData} showTitles />
   )
 
   expect(wrapper.find('h3').first().text()).toEqual(' 1 - Evaluate Yourself')
