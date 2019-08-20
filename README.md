@@ -52,7 +52,7 @@ const mockData = [
 export default class Root extends Component {
   render () {
     return (
-      <Steppify position='top' contents={mockData} />
+      <Steppify position='top' contents={mockData} showTitles />
     )
   }
 }
@@ -84,6 +84,12 @@ You also can decide where to display your stepper!
 ```
 
 Also, stepper is able to track your scroll position and accordingly will highlight the current step to help your users to follow the steps even more easier. You also can go to the specific step by clicking that on the stepper.
+
+```javascript
+//This will display the title of the each step.
+<Steppify position='top' contents={mockData} showTitles/>
+
+```
 
 
 

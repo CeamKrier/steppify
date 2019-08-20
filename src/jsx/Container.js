@@ -76,7 +76,7 @@ export default class Container extends Component {
 
         <div className='contentContainer'>
           {this.state.contents.map((value, index) => {
-            return <StepContent id={index + 1} data={value} />
+            return <StepContent id={index + 1} data={value} showTitles={this.props.showTitles} />
           })}
         </div>
       </div>

@@ -198,7 +198,7 @@ const mockData = [
 export default class Root extends Component {
   render () {
     return (
-      <Steppify position='bottom' contents={mockData} />
+      <Steppify position='bottom' contents={mockData} showTitles={false} />
     )
   }
 }

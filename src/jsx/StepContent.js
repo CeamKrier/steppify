@@ -13,7 +13,7 @@ export default class StepContent extends React.Component {
       <div id={'section' + this.props.id} className='stepAlign'>
         <div className='bigHeight'>
           <div>
-            <h3 style={{width: '-webkit-fill-available'}}> {this.props.id + ' - ' + this.props.data.title}</h3>
+            {this.props.showTitles ? <h3 style={{width: '-webkit-fill-available'}}> {this.props.id + ' - ' + this.props.data.title}</h3> : undefined}
             <p>
               {this.props.data.content}
             </p>
