@@ -128,7 +128,7 @@ var Container =
       var _milestoneHandler = (0, _asyncToGenerator2.default)(
       /*#__PURE__*/
       _regenerator.default.mark(function _callee2() {
-        var stepperHeight, milestones, index, stepsHeight, decrementPerStep;
+        var stepperHeight, milestones, index, queryToBeSelected, stepsHeight, decrementPerStep;
         return _regenerator.default.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
@@ -141,7 +141,8 @@ var Container =
                 milestones = [];
 
                 for (index = 1; index < this.state.contents.length + 1; index++) {
-                  stepsHeight = document.querySelector('#section' + index + ' h3').offsetTop;
+                  queryToBeSelected = this.props.showTitles ? '#section' + index + ' h3' : '#section' + index;
+                  stepsHeight = document.querySelector(queryToBeSelected).offsetTop;
                   decrementPerStep = 20;
 
                   if (index === this.state.contents.length) {
