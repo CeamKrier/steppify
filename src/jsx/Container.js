@@ -53,7 +53,8 @@ export default class Container extends Component {
     let stepperHeight = document.getElementsByClassName('stepper')[0].clientHeight
     let milestones = []
     for (let index = 1; index < this.state.contents.length + 1; index++) {
-      let stepsHeight = document.querySelector('#section' + index + ' h3').offsetTop
+      const queryToBeSelected = this.props.showTitles ? '#section' + index + ' h3' : '#section' + index
+      let stepsHeight = document.querySelector(queryToBeSelected).offsetTop
       let decrementPerStep = 20
       if (index === this.state.contents.length) {
         decrementPerStep = 70
