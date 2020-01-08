@@ -2,21 +2,22 @@
   "name": "steppify",
   "version": "1.1.1",
   "description": "A content stepper implementation for the react.",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.js --inline --hot --port 5000",
-    "test": "jest",
-    "build": "babel ./src/jsx/Container.js --out-file index.js"
+    "build": "tsc -d",
+    "version:up": "npm version --force -m \"chore: version bumped to %s\"",
+    "postversion": "git push && npm publish"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CeamKrier/steppify.git"
   },
   "keywords": [
-    "stepper",
+    "step",
+    "tabs",
+    "progress",
     "react"
   ],
   "author": "Emre Çakır",
@@ -26,31 +27,17 @@
   },
   "homepage": "https://github.com/CeamKrier/steppify#readme",
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.2.2",
-    "@babel/plugin-transform-runtime": "^7.2.0",
-    "@babel/preset-env": "^7.3.1",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.5",
-    "css-loader": "^2.1.0",
-    "enzyme": "^3.8.0",
-    "enzyme-adapter-react-16": "^1.9.0",
-    "jest": "^24.1.0",
-    "node-sass": "^4.11.0",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "style-loader": "^0.23.1",
-    "webpack": "^4.29.1",
-    "webpack-cli": "^3.2.3",
-    "webpack-dev-server": "^3.1.14"
-  },
-  "jest": {
-    "moduleNameMapper": {
-      "^.+\\.(css|less|scss)$": "<rootDir>/config/CSSStub.js"
-    }
-  },
-  "dependencies": {
-    "lodash": ">=4.17.13",
-    "@babel/runtime": "^7.3.1"
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
+    "css-loader": "^3.4.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "rimraf": "^3.0.0",
+    "style-loader": "^1.1.1",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.4",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
   }
 }
